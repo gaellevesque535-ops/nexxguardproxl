@@ -2,44 +2,72 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>NexGuard</title>
+<title>NexGuard - Sécurité avancée</title>
 
 <style>
 body {
     margin:0;
-    font-family: Arial;
-    background: linear-gradient(135deg, #0f172a, #1e293b);
-    color:white;
-    text-align:center;
+    font-family: Arial, sans-serif;
+    background: #0a0a0a;
+    color: white;
 }
 
-.container {
-    margin-top:100px;
+header {
+    text-align:center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #000, #111);
 }
 
 h1 {
-    font-size:40px;
+    font-size: 50px;
+    margin-bottom: 10px;
 }
 
-p {
-    color:#cbd5e1;
+.subtitle {
+    color: #aaa;
+    font-size: 18px;
 }
 
 .btn {
     display:inline-block;
-    margin-top:20px;
-    padding:15px 35px;
-    background:#22c55e;
-    color:white;
-    text-decoration:none;
-    border-radius:8px;
-    font-weight:bold;
-    transition:0.3s;
+    margin-top: 25px;
+    padding: 15px 35px;
+    background: #00c853;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 18px;
 }
 
-.btn:hover {
-    background:#16a34a;
-    transform:scale(1.05);
+.section {
+    padding: 60px 20px;
+    text-align:center;
+}
+
+.features {
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:30px;
+}
+
+.card {
+    background:#111;
+    padding:25px;
+    width:250px;
+    border-radius:10px;
+}
+
+.price {
+    font-size: 40px;
+    margin: 20px 0;
+    color:#00c853;
+}
+
+footer {
+    text-align:center;
+    padding:30px;
+    color:#777;
 }
 </style>
 
@@ -47,14 +75,57 @@ p {
 
 <body>
 
-<div class="container">
-    <h1>🔒 NexGuard</h1>
-    <p>Protection avancée • Performance • Sécurité</p>
+<header>
+    <h1>NexGuard</h1>
+    <p class="subtitle">Protection avancée • Performance • Sécurité professionnelle</p>
 
-    <a href="https://github.com/gaellevesque535-ops/nexxguardproxl/releases/download/v1.0/nexxguardproxl-1-0.zip" class="btn">
-        Télécharger maintenant
-    </a>
-</div>
+    <a href="TON_LIEN_GITHUB" class="btn">Télécharger maintenant</a>
+</header>
+
+<section class="section">
+    <h2>Pourquoi choisir NexGuard ?</h2>
+
+    <div class="features">
+
+        <div class="card">
+            <h3>🛡️ Sécurité</h3>
+            <p>Protection contre menaces, malware et accès non autorisés.</p>
+        </div>
+
+        <div class="card">
+            <h3>⚡ Performance</h3>
+            <p>Optimisation système avancée pour un PC plus rapide.</p>
+        </div>
+
+        <div class="card">
+            <h3>🔒 Protection</h3>
+            <p>Blocage des activités suspectes en temps réel.</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="section">
+    <h2>Offre Pro</h2>
+
+    <div class="price">9.99$</div>
+
+    <p>Accès complet à toutes les fonctionnalités premium</p>
+
+    <a href="TON_LIEN_GITHUB" class="btn">Télécharger</a>
+</section>
+
+<section class="section">
+    <h2>Comment ça marche ?</h2>
+
+    <p>1. Téléchargez NexGuard</p>
+    <p>2. Installez en quelques secondes</p>
+    <p>3. Protégez votre système immédiatement</p>
+</section>
+
+<footer>
+    © 2026 NexGuard - Tous droits réservés
+</footer>
 
 </body>
 </html>
