@@ -20,4 +20,4 @@ app.post("/payment-success", (req, res) => {
 
     res.send({ link });
 });
-sk_live_...
+
