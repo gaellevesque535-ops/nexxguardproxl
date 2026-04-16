@@ -2,41 +2,40 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Téléchargement NexGuard</title>
+<title>Accès NexGuard</title>
+
+<script>
+const token = new URLSearchParams(window.location.search).get("access");
+
+if(token !== "NEX12345SECURE") {
+    document.body.innerHTML = "<h1>⛔ Accès refusé</h1>";
+}
+</script>
 
 <style>
 body {
-background: #0a0a0a;
-color: white;
-text-align: center;
-font-family: Arial;
-padding-top: 100px;
+    background: #0a0a0a;
+    color: white;
+    text-align: center;
+    font-family: Arial;
+    padding-top: 100px;
 }
-
-.bouton {
-background: #00ff88;
-color: black;
-padding: 15px 30px;
-text-decoration: none;
-border-radius: 5px;
-font-weight: bold;
+a {
+    background: #00ffcc;
+    padding: 15px 30px;
+    color: black;
+    text-decoration: none;
+    border-radius: 8px;
 }
 </style>
-
 </head>
 
 <body>
 
-<h1>✅ Paiement confirmé</h1>
-<p>Merci pour votre achat.</p>
+<h1>🔓 Accès autorisé</h1>
+<p>Téléchargez NexGuard Pro :</p>
 
-<h2>Téléchargez NexGuard Pro :</h2>
-
-<a href="https://github.com/gaellevesque535-ops/nexxguardproxl/releases/download/v1.0/NexGuard.zip" class="bouton">
-⬇️ Télécharger maintenant
-</a>
+<a href="TON_LIEN_GITHUB_ZIP">Télécharger</a>
 
 </body>
 </html>
-<p>📩 Un email de confirmation vous a été envoyé.</p>
-<p>🔐 Conservez ce lien en lieu sûr.</p>
