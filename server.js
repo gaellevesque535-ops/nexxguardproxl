@@ -1,23 +1,32 @@
 require('dotenv').config();
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
-const express = require("express");
+
+const express = require('express');
 const app = express();
+
+const Stripe = require('stripe');
+const stripe = Stripe(process.env.STRIPE_SECRET_KEY);
 
 app.use(express.json());
 
-app.post("/payment-success", (req, res) => {
+app.post('/webhook', (req, res) => {
 
-    const email = req.body.email;
+    const event = req.body;
 
-    const token = Math.random().toString(36).substring(2);
+    if (event.type === 'checkout.session.completed') {
 
-    const link = `https://gaellevesque535-ops.github.io/nexxguardproxl/download.html?access=${token}`;
+        const session = event.data.object;
 
-    console.log("NOUVEAU CLIENT:", email);
-    console.log("ACCES:", link);
+        const email = session.customer_details.email;
 
-    // ici tu peux envoyer email plus tard
+        const token = Math.random().toString(36).substring(2);
 
-    res.send({ link });
+        const link = `https://gaellevesque535-ops.github.io/nexxguardproxl/download.html?access=${token}`;
+
+        console.log("💰 Nouveau client :", email);
+        console.log("🔗 Accès :", link);
+    }
+
+    res.sendStatus(200);
 });
 
+app.listen(3000, () => console.log("🚀 Server OK"));
